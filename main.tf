@@ -10,8 +10,8 @@ terraform {
     bucket = "testingdevops"
     key    = "state/terraform.tfstate"
     region = "us-east-1"
-    shared_credentials_file = "~/.aws/credentials"
-    profile = "testing"
+    #shared_credentials_file = "~/.aws/credentials"
+    #profile = "testing"
   }
 }
 
