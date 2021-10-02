@@ -1,7 +1,7 @@
 provider "aws" {
   region  = "us-east-1"
   version = "~> 3.38.0"
-  #shared_credentials_file = "~/.aws/credentials"
+  
   
 
 }
@@ -12,7 +12,7 @@ terraform {
       encrypt = true
       key = "state/terraform.tfstate"
       region  = "us-east-1"
-      
-      default = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
+      shared_credentials_file = "~/.aws/credentials"
+      #profile = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
   }
 }
