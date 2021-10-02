@@ -8,7 +8,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "testingdevops"
-    key    = "state/terraform.tfstate"
+    key    = " "
     region = "us-east-1"
   }
 }
@@ -17,7 +17,7 @@ terraform {
 #  region  = "us-east-1"
 #  version = "~> 3.38.0"
 #  #shared_credentials_file = "~/.aws/credentials"
-#  
+#state/terraform.tfstate  
 #
 #}
 #
