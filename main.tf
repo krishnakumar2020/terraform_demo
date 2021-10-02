@@ -12,6 +12,7 @@ terraform {
       encrypt = true
       key = "state/terraform.tfstate"
       region  = "us-east-1"
-      profile = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
+      shared_credentials_file = "~/.aws/credentials"
+      #profile = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
   }
 }
