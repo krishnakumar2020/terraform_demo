@@ -3,11 +3,12 @@ provider "aws" {
   version = "~> 3.38.0"
 }
 
-
 terraform {
-  backend "s3" {
+    backend "s3" {
     bucket = "testingdevops"
-    key    = "state/terraform.tfstate"
+    encrypt = true
+    key = "state.tfstate"
     region = "us-east-1"
+    profile = "my-profile" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
   }
 }
