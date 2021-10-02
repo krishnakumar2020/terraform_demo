@@ -12,6 +12,6 @@ terraform {
     encrypt = true
     key = "state.tfstate"
     
-    profile = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
+    #profile = "~/.aws/credentials" # you have to give the profile name here. not the variable("${var.AWS_PROFILE}")
   }
 }
